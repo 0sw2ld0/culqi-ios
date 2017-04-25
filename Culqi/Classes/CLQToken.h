@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class CQLTokenCard;
+@class CLQTokenCard;
 
 NS_ASSUME_NONNULL_BEGIN
 @interface CLQToken : NSObject
@@ -18,19 +18,19 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) NSString * identifier;
 @property (nonatomic, readonly) NSString * createdAt;
 
-@property (nonatomic, strong, readonly) CQLTokenCard * tokenCard;
+@property (nonatomic, strong, readonly) CLQTokenCard * tokenCard;
 
 - (instancetype)initWithIdentifier:(NSString *)identifier
                                      email:(NSString *)email
                                  createdAt:(NSString *)createdAt
                                 objectType:(NSString *)objectType
-                                 tokenCard:(CQLTokenCard *)tokenCard;
+                                 tokenCard:(CLQTokenCard *)tokenCard;
 
 + (instancetype)newWithIdentifier:(NSString *)identifier
                                     email:(NSString *)email
                                 createdAt:(NSString *)createdAt
                                objectType:(NSString *)objectType
-                                tokenCard:(CQLTokenCard *)tokenCard;
+                                tokenCard:(CLQTokenCard *)tokenCard;
 
 @end
 NS_ASSUME_NONNULL_END
