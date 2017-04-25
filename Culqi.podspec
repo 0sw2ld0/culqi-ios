@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Culqi'
-  s.version          = '1.0'
+  s.version          = '2.0'
   s.summary          = 'A short description of Culqi.'
 
 # This description is used to generate tags and improve search results.
@@ -25,7 +25,7 @@ TODO: Add long description of the pod here.
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
 ##############################################################################################
-  s.author           = { 'Guillermo Saenz' => 'gsaenz@proatomicdev.com' } # <--------Change this
+  s.author           = { 'Guillermo Saenz' => 'gsaenz@proatomicdev.com', 'Oswaldo Leon' => 'oswaldo.leon9@gmail.com' } # <--------Change this
 ##############################################################################################
   s.source           = { :git => 'https://github.com/culqi/culqi-ios.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'

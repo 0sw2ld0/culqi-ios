@@ -17,15 +17,13 @@
     [[CLQHTTPSessionManager manager].requestSerializer setValue:[NSString stringWithFormat:@"Bearer %@", merchantCode] forHTTPHeaderField:@"Authorization"];
 }
 
-+ (void)createTokenForEmail:(NSString *)email firstName:(NSString *)firstName lastName:(NSString *)lastName CVC:(NSNumber *)cvc expMonth:(NSNumber *)expMonth expYear:(NSNumber *)expYear number:(NSNumber *)number success:(void (^)(NSDictionary *))success failure:(void (^)(NSError *))failure {
++ (void)createTokenForEmail:(NSString *)email CVC:(NSNumber *)cvc expMonth:(NSNumber *)expMonth expYear:(NSNumber *)expYear number:(NSNumber *)number success:(void (^)(NSDictionary *))success failure:(void (^)(NSError *))failure {
     
-    NSDictionary *parameters = @{@"correo_electronico":email,
-                                 @"nombre":firstName,
-                                 @"apellido":lastName,
+    NSDictionary *parameters = @{@"email":email,
                                  @"cvv":cvc,
-                                 @"m_exp":expMonth,
-                                 @"a_exp":expYear,
-                                 @"numero":number};
+                                 @"expiration_month":expMonth,
+                                 @"expiration_year":expYear,
+                                 @"card_number":number};
     
     [[CLQHTTPSessionManager manager] POST:@"tokens" parameters:parameters progress:NULL success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (success) success (responseObject);

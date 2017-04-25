@@ -14,20 +14,20 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) NSString *brand;
 @property (nonatomic, readonly) NSString *number;
 @property (nonatomic, readonly) NSString *bin;
-@property (nonatomic, readonly) NSString *lastName;
-@property (nonatomic, readonly) NSString *firstName;
+@property (nonatomic, readonly) NSString *type;
+@property (nonatomic, readonly) NSString *category;
 
 - (instancetype)initWithBrand:(NSString *)brand
                        number:(NSString *)number
                           bin:(NSString *)bin
-                     lastName:(NSString *)lastName
-                    firstName:(NSString *)firstName;
+                         type:(NSString *)type
+                     category:(NSString *)category;
 
 + (instancetype)newWithBrand:(NSString *)brand
                       number:(NSString *)number
                          bin:(NSString *)bin
-                    lastName:(NSString *)lastName
-                   firstName:(NSString *)firstName;
+                        type:(NSString *)type
+                    category:(NSString *)category;
 
 @end
 NS_ASSUME_NONNULL_END

@@ -14,14 +14,12 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)setAutorizationHeaderFieldWithMerchantCode:(NSString *)merchantCode;
 
 + (void)createTokenForEmail:(NSString *)email
-                  firstName:(NSString *)firstName
-                   lastName:(NSString *)lastName
                         CVC:(NSNumber *)cvc
                    expMonth:(NSNumber *)expMonth
                     expYear:(NSNumber *)expYear
                      number:(NSNumber *)number
-                    success:(void (^)(NSDictionary *responseObject))success
-                    failure:(void (^)(NSError *error))failure;
+                    success:(void (^)(NSDictionary *))success
+                    failure:(void (^)(NSError *))failure;
 
 @end
 NS_ASSUME_NONNULL_END

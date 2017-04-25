@@ -12,26 +12,27 @@
 
 #pragma mark - Lifecycle
 
-- (instancetype)initWithBrand:(NSString *)brand number:(NSString *)number bin:(NSString *)bin lastName:(NSString *)lastName firstName:(NSString *)firstName {
+- (instancetype)initWithBrand:(NSString *)brand number:(NSString *)number bin:(NSString *)bin type:(NSString *)type category:(NSString *)category{
     
     self = [super init];
     if (self) {
         _brand = brand;
         _number = number;
         _bin = bin;
-        _lastName = lastName;
-        _firstName = firstName;
+        _type = type;
+        _category = category;
+
     }
     return self;
 }
 
-+ (instancetype)newWithBrand:(NSString *)brand number:(NSString *)number bin:(NSString *)bin lastName:(NSString *)lastName firstName:(NSString *)firstName {
++ (instancetype)newWithBrand:(NSString *)brand number:(NSString *)number bin:(NSString *)bin type:(NSString *)type category:(NSString *)category{
     
     return [[CLQTokenCard alloc] initWithBrand:brand
                                         number:number
                                            bin:bin
-                                      lastName:lastName
-                                     firstName:firstName];
+                                          type:type
+                                      category:category];
 }
 
 @end
