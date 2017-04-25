@@ -106,9 +106,6 @@ CLQCard *card = [CLQCard newWithNumber:[numberFormatter numberFromString:self.tx
                                    CVC:[numberFormatter numberFromString:self.txtFieldCVC.text]
                               expMonth:[numberFormatter numberFromString:self.txtFieldExpMonth.text]
                                expYear:[numberFormatter numberFromString:self.txtFieldExpYear.text]
-
-                             firstName:self.txtFieldName.text
-                              lastName:self.txtFieldLastName.text
                                 email:self.txtFieldEmail.text];
 
 [[Culqi sharedInstance] createTokenForCard:card success:^(CLQToken * _Nonnull token) {
