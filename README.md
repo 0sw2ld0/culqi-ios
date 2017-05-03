@@ -8,13 +8,13 @@ SDK oficial de CULQI para iOS, pagos simples en tu sitio web.
 
 > **Importante**: Hemos descontinuado el soporte a la versión 1.0 de Culqi API para centrarnos en la nueva versión. 
 
-**Nota**: Esta biblioteca trabaja con la [v1.2](https://culqi.api-docs.io/v1.2) de Culqi API.
+**Nota**: Esta biblioteca trabaja con la [v2.0](https://culqi.com/api) de Culqi API.
 
 
 ## Requisitos
 
 * iOS 8.0 o superior.
-* Credenciales de comercio Culqi (1).
+* Credenciales de la llave pública (1).
 
 (1) Debes registrarte [aquí](https://integ-panel.culqi.com/#/registro). Luego, crear un comercio y estando en el panel, acceder a Desarrollo > [***API Keys***](https://integ-panel.culqi.com/#/panel/comercio/desarrollo/llaves).
 
@@ -54,7 +54,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 
 target 'TargetName' do
-pod 'Culqi', '~> 1.0'
+pod 'Culqi', '~> 2.0'
 end
 ```
 
@@ -106,9 +106,6 @@ CLQCard *card = [CLQCard newWithNumber:[numberFormatter numberFromString:self.tx
                                    CVC:[numberFormatter numberFromString:self.txtFieldCVC.text]
                               expMonth:[numberFormatter numberFromString:self.txtFieldExpMonth.text]
                                expYear:[numberFormatter numberFromString:self.txtFieldExpYear.text]
-
-                             firstName:self.txtFieldName.text
-                              lastName:self.txtFieldLastName.text
                                 email:self.txtFieldEmail.text];
 
 [[Culqi sharedInstance] createTokenForCard:card success:^(CLQToken * _Nonnull token) {
