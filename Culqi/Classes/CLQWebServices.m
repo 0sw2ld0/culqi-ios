@@ -17,7 +17,7 @@
     [[CLQHTTPSessionManager manager].requestSerializer setValue:[NSString stringWithFormat:@"Bearer %@", merchantCode] forHTTPHeaderField:@"Authorization"];
 }
 
-+ (void)createTokenForEmail:(NSString *)email CVC:(NSNumber *)cvc expMonth:(NSNumber *)expMonth expYear:(NSNumber *)expYear number:(NSNumber *)number success:(void (^)(NSDictionary *))success failure:(void (^)(NSError *))failure {
++ (void)createTokenForEmail:(NSString *)email CVC:(NSString *)cvc expMonth:(NSNumber *)expMonth expYear:(NSNumber *)expYear number:(NSNumber *)number success:(void (^)(NSDictionary *))success failure:(void (^)(NSError *))failure {
     
     NSDictionary *parameters = @{@"email":email,
                                  @"cvv":cvc,

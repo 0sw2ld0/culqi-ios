@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)setAutorizationHeaderFieldWithMerchantCode:(NSString *)merchantCode;
 
 + (void)createTokenForEmail:(NSString *)email
-                        CVC:(NSNumber *)cvc
+                        CVC:(NSString *)cvc
                    expMonth:(NSNumber *)expMonth
                     expYear:(NSNumber *)expYear
                      number:(NSNumber *)number
