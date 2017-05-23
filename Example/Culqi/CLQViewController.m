@@ -46,7 +46,6 @@
     [self.txtFieldExpMonth setText:@"09"];
     [self.txtFieldExpYear setText:@"2020"];
     [self.txtFieldCVC setText:@"123"];
-    
     [self.txtFieldEmail setText:@"jhon@test.com"];
     [self.txtFieldName setText:@"Jhon"];
     [self.txtFieldLastName setText:@"Test"];
@@ -67,12 +66,9 @@
     [numberFormatter setFormatterBehavior:[NSNumberFormatter defaultFormatterBehavior]];
     
     CLQCard *card = [CLQCard newWithNumber:[numberFormatter numberFromString:self.txtFieldCardNumber.text]
-                                       CVC:[numberFormatter numberFromString:self.txtFieldCVC.text]
+                                       CVC:self.txtFieldCVC.text
                                   expMonth:[numberFormatter numberFromString:self.txtFieldExpMonth.text]
                                    expYear:[numberFormatter numberFromString:self.txtFieldExpYear.text]
-                     
-                                 firstName:self.txtFieldName.text
-                                  lastName:self.txtFieldLastName.text
                                      email:self.txtFieldEmail.text];
     
     [[Culqi sharedInstance] createTokenForCard:card success:^(CLQToken * _Nonnull token) {
